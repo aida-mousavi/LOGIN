@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/css/output.css">
+    <link rel="stylesheet" href="src/css/master.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="flex h-screen justify-center items-center relative overflow-hidden ">
+            <div id="circle"
+                class="absolute w-[2000px] h-[2000px] bg-primaryOrange right-[48%] bottom-[-60%]  rounded-full duration-1000 z-10">
+            </div>
+            <div id="newHere"
+                class=" flex flex-wrap justify-center items-center absolute top-[40px] left-[100px]  w-[30%] h-[10%]  text-white duration-1000 z-30">
+                <h2 class="w-full flex justify-center items-center text-2xl">New here ?</h2>
+                <p class="w-full flex  justify-center items-center text-center py-3">Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit. Debitis, ex ratione. Aliquid</p>
+                <button onclick="logIn()"
+                    class=" w-[130px] h-[40px] rounded-md flex justify-center items-center  border-2 border-white">LOGIN</button>
+
+            </div>
+            <div id="oneOfUs"
+                class="flex-wrap justify-center items-center absolute top-[40px] right-[-600px]  w-[30%] h-[10%]  text-white duration-1000  z-30">
+                <h2 class="w-full flex justify-center items-center text-2xl">One of us ?</h2>
+                <p class="w-full flex  justify-center items-center text-center py-3">Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit. Debitis, ex ratione. Aliquid</p>
+                <div class="flex justify-center w-full"><button onclick="signUp()"
+                        class=" w-[130px] h-[40px] rounded-md flex justify-center items-center  border-2 border-white">SIGN
+                        UP</button></div>
+
+            </div>
+            <figure id="img1" class="absolute bottom-[-80px] left-[20px] duration-1000 delay-75 z-20">
+                <img src="src/img/Privacy-policy-rafiki.png" alt="">
+            </figure>
+            <figure id="img2" class="absolute bottom-[-80px] right-[-600px] z-20  duration-1000 opacity-0 invisible">
+                <img src="src/img/Mobile-login-rafiki.png" alt="">
+            </figure>
+            <div id="sign"
+                class=" w-[400px]  text-xl flex justify-center flex-wrap absolute right-[200px] duration-1000 z-0">
+                <h2 class="text-4xl font-semibold mb-3 w-full flex justify-center ">Sign in</h2>
+                <p class="mb-1" id="warningForm"></p>
+
+                <div class="flex  items-center bg-gray-100 rounded-lg  w-full my-[6px] ">
+                    <i class="bi bi-person-fill text-gray-500 px-3 text-2xl mb-[10px] "></i>
+                    <input type="text" placeholder="UserName" class="py-3  bg-gray-100  outline-none">
+                </div>
+                <p class="warningUser"></p>
+
+
+                <div class="flex items-center bg-gray-100 w-full my-[6px] rounded-lg">
+                    <i class="bi bi-lock-fill text-gray-500 px-3 text-2xl mb-[10px]"></i>
+                    <input type="password" placeholder="Password" class="py-3  bg-gray-100 outline-none">
+
+                </div>
+                <p class="warningPass my-1 "></p>
+
+                <div class="flex justify-center my-3 w-full "><button data-id="sign" onclick="welcome(this)"
+                        class="bg-primaryOrange text-white w-[140px] h-[50px] rounded-lg flex justify-center items-center "
+                        href="">SIGN UP</button></div>
+                <p>Or Sign in with social platforms</p>
+                <div class=" flex flex-wrap justify-evenly items-center w-[68%] my-3 ">
+                    <i
+                        class="bi bi-facebook w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center "></i>
+                    <i
+                        class="bi bi-twitter w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center"></i>
+                    <i
+                        class="bi bi-google w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center"></i>
+                    <i
+                        class="bi bi-linkedin w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center"></i>
+
+                </div>
+
+            </div>
+            <div id="log"
+                class=" w-[400px]  text-xl flex justify-center flex-wrap absolute left-[200px] duration-1000 z-0">
+                <h2 class="text-4xl font-semibold mb-4 w-full justify-center flex">Log in</h2>
+                <p class="mb-1" id="warningForm"></p>
+
+                <div class="flex  items-center bg-gray-100 rounded-lg  w-full my-[6px] ">
+                    <i class="bi bi-person-fill text-gray-500 px-3 text-2xl mb-[10px] "></i>
+                    <input type="text" placeholder="UserName" class="py-3  bg-gray-100  outline-none">
+                </div>
+                <p class="warningUser"></p>
+
+
+
+                <div class="flex items-center bg-gray-100 w-full my-[6px] rounded-lg">
+                    <i class="bi bi-lock-fill text-gray-500 px-3 text-2xl mb-[10px]"></i>
+                    <input type="password" placeholder="Password" class="py-3  bg-gray-100 outline-none">
+                </div>
+                <p class="warningPass"></p>
+                <div class="flex items-center bg-gray-100 w-full my-[6px] rounded-lg">
+                    <i class="bi bi-envelope-fill text-gray-500 px-3 text-2xl mb-[10px]"></i>
+                    <input type="email" placeholder="Email" class="py-3  bg-gray-100 outline-none">
+
+
+                </div>
+                <div class="flex justify-center my-3 w-full text-center">
+                    <button data-id="log" onclick="welcome(this)"
+                        class="bg-primaryOrange text-white w-[140px] h-[50px] rounded-lg flex justify-center items-center ">LOGIN</button>
+                </div>
+                <p>Or Sign in with social platforms</p>
+                <div class=" flex flex-wrap justify-evenly items-center w-[68%] my-3 ">
+                    <i
+                        class="bi bi-facebook w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center "></i>
+                    <i
+                        class="bi bi-twitter w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center"></i>
+                    <i
+                        class="bi bi-google w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center"></i>
+                    <i
+                        class="bi bi-linkedin w-[45px] h-[45px] rounded-full border-[1px] border-black flex justify-center items-center"></i>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    let circle = document.getElementById('circle'),
+        newHere = document.getElementById('newHere'),
+        img1 = document.getElementById('img1'),
+        img2 = document.getElementById('img2'),
+        sign = document.getElementById('sign'),
+        oneOfUs = document.getElementById('oneOfUs'),
+        log = document.getElementById('log')
+    function logIn() {
+        circle.style.right = '-80%'
+        newHere.style.left = '-600px'
+        img1.style.left = '-600px'
+        oneOfUs.style.right = "100px"
+        img2.style.opacity = '1'
+        img2.style.visibility = 'visible'
+        img2.style.right = "20px"
+    }
+
+    function signUp() {
+        circle.style.right = '48%'
+        newHere.style.left = '100px'
+        img1.style.left = '20px'
+        oneOfUs.style.right = "-600px"
+        img2.style.right = "-600px"
+    }
+    let flagUser = true
+    let flagPass = true
+    let notEmpty = false
+    function welcome(info) {
+        let choose = info.getAttribute("data-id")
+        if (choose == 'sign') {
+            choose = document.getElementById('sign')
+        }
+        else {
+            choose = document.getElementById('log')
+
+        }
+        let inputLog = choose.querySelectorAll('input'),
+            warningForm = choose.querySelector('#warningForm'),
+            warningUser = choose.querySelector(".warningUser"),
+            warningPass = choose.querySelector(".warningPass")
+
+        for (i = 0; i < inputLog.length; i++) {
+            if (inputLog[i].value != "") {
+                notEmpty = true
+
+            }
+            else {
+                warningForm.innerText = "Please fill form"
+                warningForm.style.color = "red"
+                notEmpty = false
+
+            }
+        }
+        if (notEmpty) {
+
+            if (inputLog[0].value.length < 8) {
+                warningUser.innerHTML = 'Your UserName is short'
+                warningUser.style.color = "red"
+
+                flagUser = false
+
+            } else {
+                warningUser.innerHTML = null
+                flagUser = true
+
+
+            }
+
+            if (inputLog[1].value.length < 8) {
+                warningPass.innerHTML = 'Your Password is short'
+                warningPass.style.color = "red"
+
+                flagPass = false
+
+
+            }
+            else {
+                warningPass.innerHTML = null
+                flagPass = true
+
+            }
+            console.log(flagPass, flagUser)
+            if (flagPass && flagUser) {
+                warningForm.style.color = "green"
+                warningForm.innerText = "Welcome my friend :) "
+            }
+            else {
+                warningForm.innerText = null
+
+            }
+
+        }
+    }
+</script>
+
+</html>
